@@ -1,0 +1,10 @@
+package br.com.empresa.io;
+
+public class RegistroDeMensagens {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

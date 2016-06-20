@@ -1,0 +1,15 @@
+package br.com.empresa.io;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class RegistroDeMensagens {
+
+	public static void main(String[] args) {
+		Collection<String> mensagens = new ArrayList<String>();
+		
+		Thread t1 = new Thread(new ProduzMensagens(0, 10000, mensagens));
+		Thread t2 = new Thread(new ProduzMensagens(10000, 20000, mensagens));
+	}
+
+}

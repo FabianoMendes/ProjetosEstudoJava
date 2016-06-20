@@ -1,0 +1,28 @@
+package br.com.empresa.banco.conta;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+
+public class Banco {
+	private Map<String, Conta> contas = new HashMap<String, Conta>();
+	
+	public void adiciona(Conta conta){
+		contas.put(conta.getNome(), conta);
+	}
+	
+	public Conta pega(int posicao){
+		return contas.get(posicao);
+	}
+	
+	public int pegaQuantidadeDeContas(){
+		return contas.size();
+	}
+	
+	public Conta buscaPorNome(String nome){
+		return contas.get(nome);
+	}
+	
+}

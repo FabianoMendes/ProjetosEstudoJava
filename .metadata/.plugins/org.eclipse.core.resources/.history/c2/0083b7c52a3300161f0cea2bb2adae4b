@@ -1,0 +1,24 @@
+package br.com.empresa.banco;
+
+import java.util.TreeSet;
+
+import br.com.empresa.banco.conta.Conta;
+import br.com.empresa.banco.conta.ContaCorrente;
+
+public class TestaTreeSet {
+
+	public static void main(String[] args) {
+		TreeSet<Conta> contas = new TreeSet<Conta>();
+		
+		for(int i = 0; i <= 1000; i++){
+			ContaCorrente conta = new ContaCorrente();
+			conta.setNumero(i);
+			contas.add(conta);
+		}
+		
+		for (Conta conta : contas) {
+			System.out.println(conta);
+		}
+	}
+
+}
